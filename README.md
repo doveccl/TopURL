@@ -24,16 +24,10 @@
 
 # 使用方式
 
-- 编译
-
-```bash
-cmake . && make
-```
-
 - 单元测试
 
 ```bash
-./test
+go test
 ```
 
 - 运行程序
@@ -45,10 +39,33 @@ http://www.qq.com/
 http://www.baidu.com/
 ... ...
 http://ecl.me/
+
 ```
 
 运行如下命令，结果会直接输出到 stdout
 
 ```bash
-./main /path/to/urls
+go run . --file=/path/to/urls
+```
+
+# 性能测试
+
+CPU: 2.5 GHz Intel Core i7
+
+Memory: 16 GB 1600 MHz DDR3
+
+## 1GB Test
+
+```bash
+./generator.py 1 test1gb
+go run . --file=test1gb
+// program took 10m21.245904647s
+```
+
+## 10GB Test
+
+```bash
+./generator.py 10 test10gb
+go run . --file=test10gb
+// program took 1h50m45.67196501s
 ```

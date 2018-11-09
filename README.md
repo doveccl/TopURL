@@ -54,18 +54,10 @@ CPU: 2.5 GHz Intel Core i7
 
 Memory: 16 GB 1600 MHz DDR3
 
-## 1GB Test
-
-```bash
-./generator.py 1 test1gb
-go run . --file=test1gb
-// program took 10m21.245904647s
-```
-
 ## 10GB Test
 
 ```bash
 ./generator.py 10 test10gb
 go run . --file=test10gb
-// program took 1h50m45.67196501s
+// program took 17m2.769613329s
 ```
